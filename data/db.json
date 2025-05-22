@@ -1,0 +1,28 @@
+{
+    "blogs": [
+        {
+            "title": "My first Blog",
+            "body": "People are different. People choose different criteria. But if there is a better way among many alternatives, I want to encourage that way by making it comfortable. So that's what I've tried to do.",
+            "author": "mario",
+            "id": 1
+        },
+        {
+            "title": "Fear and Trembling",
+            "body": "I hope to see Ruby help every programmer in the world to be productive, and to enjoy programming, and to be happy. That is the primary purpose of Ruby language.",
+            "author": "njonge",
+            "id": 2
+        },
+        {
+            "title": "The Moving Toyshop",
+            "body": "Man is driven to create; I know I really love to create things. And while I'm not good at painting, drawing, or music, I can write software.",
+            "author": "mario",
+            "id": 3
+        },
+        {
+            "title": "The Line of Beauty",
+            "body": "I believe consistency and orthogonality are tools of design, not the primary goal in design.",
+            "author": "mario",
+            "id": 4
+        }
+    ]
+}
