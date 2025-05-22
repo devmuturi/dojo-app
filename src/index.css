@@ -1,0 +1,28 @@
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.blog-list {
+  max-width: 600px;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.blog-preview {
+  border-bottom: 1px gainsboro solid;
+}
+
+
+.blog-list h1 {
+  color: #91512f;
+}
+
+
+
