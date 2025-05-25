@@ -4,6 +4,7 @@ import NavBar from './components/NavBar'
 
 export default function Content() {
   const [blogs, setBlogs] = useState(null);
+  const [isLoading, setLoading] = useState(true);
 
   const handleDelete = (id) => {
     const newBlogs = blogs.filter(blog => blog.id !== id)
@@ -18,12 +19,14 @@ export default function Content() {
       })
       .then((data) => {
         setBlogs(data)
+        setLoading(false)
       })
   }, []);
 
   return (
     <div>
       <NavBar />
+      {isLoading && <div>Loading...</div>}
       {blogs && <BlogList blogs={blogs} title="All Blogs!" handleDelete={handleDelete} />}
       {blogs && <BlogList blogs={blogs.filter((blog) => blog.author == 'mario')} title="Mario's blogs" />}
     </div>
