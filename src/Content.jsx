@@ -1,36 +1,15 @@
 import { useEffect, useState } from 'react'
 import BlogList from './components/BlogList'
 import NavBar from './components/NavBar'
+import useFetch from './useFetch'
 
 export default function Content() {
-  const [blogs, setBlogs] = useState(null);
-  const [isLoading, setLoading] = useState(true);
-  const [error, setError] = useState(null)
+  const { data: blogs, isLoading, error } = useFetch('http://localhost:8000/blogs')
 
   const handleDelete = (id) => {
     const newBlogs = blogs.filter(blog => blog.id !== id)
     setBlogs(newBlogs)
   }
-
-  // fetch the data using useEffect
-  useEffect(() => {
-    fetch('http://localhost:8000/blogs')
-      .then(res => {
-        if (!res.ok) {
-          throw Error('Could not fetch data for that resource');
-        }
-        return res.json();
-      })
-      .then((data) => {
-        setBlogs(data)
-        setLoading(false)
-        setError(null)
-      })
-      .catch(err => {
-        setLoading(false)
-        setError(err.message)
-      })
-  }, []);
 
   return (
     <div>
