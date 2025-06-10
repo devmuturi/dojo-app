@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import BlogList from './components/BlogList'
-import NavBar from './components/NavBar'
 import useFetch from './useFetch'
 
 export default function Content() {
@@ -13,8 +12,7 @@ export default function Content() {
 
   return (
     <div>
-      <NavBar />
-      <div className="container">
+      <div>
         {isLoading && <div>Loading...</div>}
         {error && <div>{ error }</div>}
         {blogs && <BlogList blogs={blogs} title="All Blogs!" handleDelete={handleDelete} />}
